@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 
 <body>
@@ -26,11 +24,8 @@
 
 
         <div class="info_content">
-            <div class="personal_info">
-                <div class="resume_item resume_info">
-            
+                <div class="resume_item">
                     <span id="name" class="bold"></span>
-            
                     <p id="title" class="regular"></p>
                     <br />
                     <ul>
@@ -59,9 +54,53 @@
                        </li>
                     </ul>
                 </div>
-            </div>
          
-        <div class="resume_item social_info">
+        <!--------SKILLS INFO-------->
+        <div class="resume_item resume_skills">
+            <h1 class="bold">skill's</h1>
+
+            <ul>
+                <li>
+                    <p class="skill_name">HTML</p>
+                    <div class="skill">
+                      <div class="skills html">
+                      </div>
+                    </div>
+                    <div class="percent">90%</div>
+                </li>
+
+                <li>
+                    <p class="skill_name">CSS</p>
+                    <div class="skill">
+                        <div class="skills css"></div>
+                    </div>
+                    <div class="percent">72%</div>
+                </li>
+
+                 <li>
+                    <p class="skill_name">JS</p>
+                    <div class="skill">
+                      <div class="skills javascript">
+                      </div>
+                    </div>
+                    <div class="percent">86%</div>
+                </li>
+
+                 <li>
+                    <p class="skill_name">PHP</p>
+                    <div class="skill">
+                      <div class="skills php">
+                      </div>
+                    </div>
+                    <div class="percent">60%</div>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--------SOCIAL-------->        
+
+        <div class="resume_item">
             <h1 class="bold">Social</h1>
             <ul>
                 <li><div class="icon">
@@ -101,12 +140,77 @@
                 </li>
             </ul>
         </div>
+    </div>  
+ </div> <!---END resume_left --->
 
+ <!--------RIGHT RESUME INFO-------->
 
+    <div class="resume_right">
+        <div class="resume_item">
+           <h1 class="bold">About me</h1>
+              <p id="about_me"></p>
+        </div>
 
+        <!--------WORK EXPERIENCE-------->
+        <div class="resume_item resume_work">
+               <h1 class="bold">Work Experience</h1>
+            <ul>
+                <li>
+                    <div class="date">2013 - 2015</div> 
+                    <div class="info">
+                         <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                    </div>
+                </li>
+                <li>
+                  <div class="date">2015 - 2017</div>
+                  <div class="info">
+                         <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                    </div>
+                </li>
+                <li>
+                  <div class="date">2017 - Present</div>
+                  <div class="info">
+                         <p class="semi-bold">Lorem ipsum dolor sit amet.</p> 
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-    </div>
-     
+        <!--------EDUCATION-------->
+            <div class="resume_item resume_education">
+                   <h1 class="bold">Education</h1>
+              <ul>
+                    <li>
+                        <div class="date">2010 - 2013</div> 
+                        <div class="info">
+                             <p class="semi-bold">Web Designing (Texas University)</p> 
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                        </div>
+                    </li>
+                    <li>
+                      <div class="date">2000 - 2010</div>
+                      <div class="info">
+                             <p class="semi-bold">Texas International School</p> 
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        <!--------HOBBIES---------->
+        <div class="resume_item resume_hobby">
+           <h1 class="bold">Hobby</h1> 
+           <ul>
+             <li><i class="fas fa-book"></i></li>
+             <li><i class="fas fa-gamepad"></i></li>
+             <li><i class="fas fa-music"></i></li>
+             <li><i class="fab fa-pagelines"></i></li>
+          </ul>
+        </div>     
+    </div><!---END resume_right --->
  </div>
 
 
@@ -117,6 +221,6 @@
       </div>
   </div>
 
-<script src="proyecto_final.js"></script>  
+ <script src="proyecto_final.js"></script>  
 </body>
 </html>
