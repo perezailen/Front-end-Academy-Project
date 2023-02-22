@@ -7,7 +7,11 @@ const email = document.querySelector('#email');
 const phone = document.querySelector('#phone_num');
 const street = document.querySelector('#street_name');
 const birth_day = document.querySelector('#birth');
-const about_me = document.querySelector('#about_me')
+const about_me = document.querySelector('#about_me');
+const face = document.querySelector('#facebook_info');
+const twitter = document.querySelector('#twitter_info');
+const youtube = document.querySelector('#youtube_info');
+const linkedin = document.querySelector('#linkedin_info');
 
 const runGenerator = async() => {
    try{
@@ -26,6 +30,7 @@ const runGenerator = async() => {
     } 
     console.log(data)
     var nro = Math.floor(Math.random() * (professions.length - 1));
+    console.log(nro)
 
     image.src = data.picture.large;
     name.textContent  = data.name.last + ' ' + first_name;
@@ -35,18 +40,54 @@ const runGenerator = async() => {
     phone.textContent = data.phone;
     street.textContent = data.location.street.name +"\n" + data.location.country;
     birth_day.textContent = birthday;
+    face.textContent = first_name + '@facebook';
+    twitter.textContent = first_name + '@twitter';
+    youtube.textContent = first_name + '@youtube';
+    linkedin.textContent = first_name + '@linkedin';
 
    } catch (error) {
     console.error(error);
    } 
 }
-  
+
+//var tooltips = [].slice.call(document.querySelectorAll('.tooltip-text'))
+document.getElementById('reading').onmouseover = function() {mouseOver()};
+document.getElementById('reading').onmouseout = function() {mouseOut()};
+
+document.getElementById('gaming').onmouseover = function() {mouseOver()};
+document.getElementById('gaming').onmouseout = function() {mouseOut()};
+
+/*tooltip3 = document.getElementById("tooltip-text");
+document.getElementById('music').onmouseover = function() {mouseOver()};
+document.getElementById('music').onmouseout = function() {mouseOut()};
+
+tooltip4 = document.getElementById("tooltip-text");
+document.getElementById('travel').onmouseover = function() {mouseOver()};
+document.getElementById('travel').onmouseout = function() {mouseOut()};
+*/
+
+/*tooltips.forEach(function(tooltip) {
+  var tooltipSpan = tooltip.querySelector('.tooltip-content');
+
+  tooltip.onmouseover = function() {mouseOver()};
+})*/
+
+var tooltip = document.getElementById('tooltip-text')
+console.log(tooltip)
+function mouseOver() {
+ tooltip.style.display = 'block';
+}
+
+function mouseOut() {
+ tooltip.style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', runGenerator);  
 boton.addEventListener('click', runGenerator);
 
 
 professions = [
-    ["Academic librarian", "Academic librarian who loves to help people find the information they need. She's passionate about helping students and researchers find the resources they need to do their work. She loves spending time in her library, reading and researching new books and materials."],
+    ["Academic librarian", "Academic librarian who loves to help people find the information they need. I am passionate about helping students and researchers find the resources they need to do their work. I love spending time in her library, reading and researching new books and materials."],
     ["Accountant","Numbers are my passion, and I make sure that everything is in order so that businesses can run smoothly. I'm always looking for ways to make things easier for my clients, and my goal is helping them grow and succeed."],
     ["Nurse","I'm a nurse, and I love caring for people. I enjoy working with patients of all ages and helping them get the best possible care. I'm passionate about my work and I enjoy helping people feel better. I've worked as a nurse for many years now, and I know that "],
     ["Aeronautical engineer","I'm an aeronautical engineer and I love everything about planes! I've been obsessed with them since I was a kid and I'm so excited to be able to work on them now. I want to make sure that everyone can experience the joy of flight, and I'm always working to make planes more efficient and safe. I design and build airplanes and helicopters."],
@@ -54,8 +95,8 @@ professions = [
     ["Architect","I'm an architect. I design buildings and spaces. I'm interested in how people interact with their environment. I want to create spaces that are efficient and beautiful. Every project is an opportunity to create something special that meets the needs of my clients."],
     ["Architectural technologist","I am an architectural technologist and I specialize in the design and construction of buildings. I have a passion for the built environment and I am always striving to create the best possible designs for my clients. I am a creative problem solver and I thrive in a challenging work environment. I am always looking for new ways to improve my skills and to expand my knowledge."],
     ["Armed forces officer","Armed Forces Officer. I am an active duty United States Army Officer. I have served for over 20 years in various leadership positions. I am a graduate of the United States Military Academy at West Point and have a master's degree in business administration from Harvard University."],
-    ["Computer scientist"," Computer scientist who loves to solve difficult problems. Always looking to learn new things and to explore new ways of thinking. Miriam is always looking for new ways to improve the way people use computers. She is also a musician and a dancer. She loves to perform her music and dance"],
-    ["Conference organiser","Conference organizer with a passion for making events that bring people together and foster community. Experienced in all stages of planning and execution, from logistics to marketing."]
+    ["Computer scientist"," Computer scientist who loves to solve difficult problems. Always looking to learn new things and to explore new ways of thinking. I am always looking for new ways to improve the way people use computers. I am also a musician and a dancer. I love to perform music and dance"],
+    ["Conference organiser","Conference organizer with a passion for making events that bring people together and foster community. Experienced in all stages of planning and execution, from logistics to marketing."],
     ["Cyber security specialist","Cyber security specialist who has been working in the field for over 10 years. I have experience with a wide range of cyber security solutions, and I'm passionate about helping companies protect their data and networks from attack. I'm also an expert in malware analysis and reverse engineering."],
     ["Dance movement therapist","I am a professional dance movement therapist. I help people heal and grow through the power of dance and movement. I believe that everyone has the ability to heal and connect with their deepest selves through movement. I am passionate about helping people feel more alive, connected, and whole."],
     ["Data analyst","I'm a data analyst who helps companies make better decisions by extracting value from data. I have a strong background in statistics and mathematics, and I love finding new ways to use data to improve business outcomes."],
