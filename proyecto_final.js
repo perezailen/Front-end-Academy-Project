@@ -51,33 +51,29 @@ const runGenerator = async() => {
 }
 
 //https://www.javascripttutorial.net/javascript-dom/javascript-getelementsbyname/
-let tooltips = document.getElementsByName('tooltip-text');
+let tooltips = document.querySelectorAll("[id='tooltip-text']")
 
 const reading = document.getElementById('reading')
-
-reading.onmouseover = function() {mouseOver()};
-reading.onmouseout = function() {mouseOut()};
+reading.onmouseover = function() {mouseOver(0)};
+reading.onmouseout = function() {mouseOut(0)};
 
 const gaming = document.getElementById('gaming')
-gaming.onmouseover = function() {mouseOver()};
-gaming.onmouseout = function() {mouseOut()};
+gaming.onmouseover = function() {mouseOver(1)};
+gaming.onmouseout = function() {mouseOut(1)};
 
 const music = document.getElementById('music')
-music.onmouseover = function() {mouseOver()};
-music.onmouseout = function() {mouseOut()};
+music.onmouseover = function() {mouseOver(2)};
+music.onmouseout = function() {mouseOut(2)};
 
 const travel = document.getElementById('travel')
-travel.onmouseover = function() {mouseOver()};
-travel.onmouseout = function() {mouseOut()};
+travel.onmouseover = function() {mouseOver(3)};
+travel.onmouseout = function() {mouseOut(3)};
 
-console.log(tooltips)
 
-function mouseOver() {
- tooltips.forEach((tooltip) => {
-    if (tooltip.onmouseover = true) {
-         tooltip.style.display = 'block';
-    }
-});
+function mouseOver(x) {
+ if(tooltips[x].onmouseover = true) {
+    tooltips[x].style.display = 'block'
+ }
 }
 
 function mouseOut() {
