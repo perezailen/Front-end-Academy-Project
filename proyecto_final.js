@@ -50,37 +50,48 @@ const runGenerator = async() => {
    } 
 }
 
-//var tooltips = [].slice.call(document.querySelectorAll('.tooltip-text'))
-document.getElementById('reading').onmouseover = function() {mouseOver()};
-document.getElementById('reading').onmouseout = function() {mouseOut()};
+//https://www.javascripttutorial.net/javascript-dom/javascript-getelementsbyname/
+let tooltips = document.getElementsByName('tooltip-text');
 
-document.getElementById('gaming').onmouseover = function() {mouseOver()};
-document.getElementById('gaming').onmouseout = function() {mouseOut()};
+const reading = document.getElementById('reading')
 
-/*tooltip3 = document.getElementById("tooltip-text");
-document.getElementById('music').onmouseover = function() {mouseOver()};
-document.getElementById('music').onmouseout = function() {mouseOut()};
+reading.onmouseover = function() {mouseOver()};
+reading.onmouseout = function() {mouseOut()};
 
-tooltip4 = document.getElementById("tooltip-text");
-document.getElementById('travel').onmouseover = function() {mouseOver()};
-document.getElementById('travel').onmouseout = function() {mouseOut()};
-*/
+const gaming = document.getElementById('gaming')
+gaming.onmouseover = function() {mouseOver()};
+gaming.onmouseout = function() {mouseOut()};
 
-/*tooltips.forEach(function(tooltip) {
-  var tooltipSpan = tooltip.querySelector('.tooltip-content');
+const music = document.getElementById('music')
+music.onmouseover = function() {mouseOver()};
+music.onmouseout = function() {mouseOut()};
 
-  tooltip.onmouseover = function() {mouseOver()};
-})*/
+const travel = document.getElementById('travel')
+travel.onmouseover = function() {mouseOver()};
+travel.onmouseout = function() {mouseOut()};
 
-var tooltip = document.getElementById('tooltip-text')
-console.log(tooltip)
+console.log(tooltips)
+
 function mouseOver() {
- tooltip.style.display = 'block';
+ tooltips.forEach((tooltip) => {
+    if (tooltip.onmouseover = true) {
+         tooltip.style.display = 'block';
+    }
+});
 }
 
 function mouseOut() {
- tooltip.style.display = 'none';
+ tooltips.forEach((tooltip) => {
+    if (tooltip.onmouseout = true) {
+        tooltip.style.display = 'none';
+    } 
+});
 }
+
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', runGenerator);  
 boton.addEventListener('click', runGenerator);
