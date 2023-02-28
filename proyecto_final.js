@@ -1,5 +1,8 @@
 //variables usadas  
 const boton = document.querySelector('#boton');
+const btn_menu = document.querySelector('.btn-menu');
+const btn_contact = document.querySelector('#make_contact');
+const side_bar = document.querySelector('.sidebar')
 const image = document.querySelector('#profile_image');
 const name = document.querySelector('#name');
 const title = document.querySelector('#title');
@@ -52,6 +55,7 @@ const runGenerator = async() => {
 
 //https://www.javascripttutorial.net/javascript-dom/javascript-getelementsbyname/
 let tooltips = document.querySelectorAll("[id='tooltip-text']")
+console.log(tooltips)
 
 const reading = document.getElementById('reading')
 reading.onmouseover = function() {mouseOver(0)};
@@ -76,21 +80,24 @@ function mouseOver(x) {
  }
 }
 
-function mouseOut() {
- tooltips.forEach((tooltip) => {
-    if (tooltip.onmouseout = true) {
-        tooltip.style.display = 'none';
-    } 
-});
+function mouseOut(x) {
+ if(tooltips[x].onmouseout = true) {
+    tooltips[x].style.display = 'none'
+ }
 }
 
 
 
-
-
+boton.onmouseover = function() {boton.innerHTML = 'Presiona para cargar un nuevo curriculum.'}
+boton.onmouseout = function() {boton.innerHTML = '&#8250'}
 
 document.addEventListener('DOMContentLoaded', runGenerator);  
+btn_menu.addEventListener('click', function () {
+    console.log('en exopand')
+    side_bar.classList.toggle("expand")
+})
 boton.addEventListener('click', runGenerator);
+
 
 
 professions = [
