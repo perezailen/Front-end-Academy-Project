@@ -330,8 +330,8 @@ button:hover {
 .sidebar .btn-menu {
   position: absolute;
   color: #fff;
-  top: 45px;  /*6px*/
-  left: 52%; /*90*/
+  top: 45px;  
+  left: 52%; 
   right: 0;
   transform: translateX(-50%);
   font-size: 25px;
@@ -410,8 +410,6 @@ button:hover {
   opacity: 1;
 }
 
-
-
 .sidebar ul li a .link-info{
   opacity: 0;
   pointer-events: none;
@@ -441,15 +439,97 @@ button:hover {
 }
 
 
-/* PHONE ADAPTABLE */
+/* ---- PHONE ADAPTABLE ---- */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
+ .resume_page {
+  width: 300px;
+}
+  .resume_left {
+    flex-basis: 100%;
+    position: static;
+    top: unset;
+    width: 180px;
+  }
 
+  .resume_right {
+    flex-basis: 100%;
+    position: static;
+    top: unset;
+    width: 200px;
+  }
+  .resume_photo {
+    width: 100px;
+    height: 100px;
+  }
 
+  .bold {
+    font-size: 14px;
+  }
+
+  .semi-bold {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 0;
+    height: 0;
+    font-size: 13px;
+  }
+
+  .resume_item {
+    padding: 15px 0;
+    border-bottom: 1px solid  #999999;
+  }
+
+  .date {
+    font-size: 13px;
+  }
+
+  .info {
+    margin-bottom: 15px;
+  }
+
+  .resume_work ul li:before,
+  .resume_education ul li:before {
+    width: 3px;
+    height: 3px;
+  }
+
+  .resume_work ul li:after,
+  .resume_education ul li:after {
+    width: 2px;
+    height: 200px;
+  }
+
+  .resume_hobby ul li {
+    width: 60px;
+    height: 60px;
+  }
+
+  .resume_hobby ul li i {
+    font-size: 20px;
+  }
+
+  .resume_hobby ul li:before {
+    width: 0;
+    height: 0;
+  }
+
+  .sidebar {
+    padding-right: 0;
+  }
+
+  .sidebar .btn-menu {
+    display: none;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+    opacity: 1;
+  }
 
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/*@media only screen and (min-width: 600px) {...} */

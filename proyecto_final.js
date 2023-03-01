@@ -31,9 +31,8 @@ const runGenerator = async() => {
       new_mail = first_name+'@'+'example.com';
       short_mail = new_mail;
     } 
-    console.log(data)
+    
     var nro = Math.floor(Math.random() * (professions.length - 1));
-    console.log(nro)
 
     image.src = data.picture.large;
     name.textContent  = data.name.last + ' ' + first_name;
@@ -55,7 +54,6 @@ const runGenerator = async() => {
 
 //https://www.javascripttutorial.net/javascript-dom/javascript-getelementsbyname/
 let tooltips = document.querySelectorAll("[id='tooltip-text']")
-console.log(tooltips)
 
 const reading = document.getElementById('reading')
 reading.onmouseover = function() {mouseOver(0)};
